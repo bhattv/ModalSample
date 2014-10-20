@@ -1,0 +1,228 @@
+#content {
+	background: #ffffff;
+	margin: -12px cp(20px, $page_width) 18px;
+	margin: cr(-12px) cp(20px, $page_width) cr(18px);
+	padding: 30px cp(30px, $page_width) 50px;
+	padding: cr(30px) cp(30px, $page_width) cr(50px);
+	@include single-box-shadow(#cccccc, 0, 0, 6px, 0);
+	border: 1px solid #dddddd;
+	
+	.main {
+		float: left;
+		width: 62.5%;
+		
+		.stage {
+			border: 1px solid #c7c8ca;
+			@include single-box-shadow(#d9d9d9, -3px, 3px, 3px, 0);
+			@include rem(margin-bottom, 24px);
+			position: relative;
+			
+			.feature {
+				@include rem(height, 320px);
+				display: none;
+				
+				&.active-feature {
+					display: block;
+				}
+				
+				&.quote {
+					background: #bac2c9 url(/images/feature-bg.jpg) repeat-x left top;
+					@include rem(height, 320px);
+					color: #ffffff;
+					font-style: italic;
+					font-weight: 100;
+					@include rem(font-size, 16px);
+					@include rem(line-height, 26px);
+
+					blockquote {
+						padding: 70px 12%;
+						padding: cr(70px) 12%;
+
+						.source {
+							display: block;
+							@include rem(font-size, 14px);
+							margin-left: 18%;
+						}					
+					}
+				}
+				
+				iframe {
+					position: absolute;
+					z-index: 1;
+					left: 0;
+					top: 0;
+				}
+			}
+		}
+		
+		.feature-links {
+			
+			@include rem(margin-top, 4px);
+			margin-left: 1.39%;
+			
+			.feature-link {
+				float: left;
+				width: 20%;
+				margin-right: 3.5%;
+				@include rem(margin-bottom, 20px);
+				color: $text_color;
+				text-decoration: none;
+				
+				.thumbnail {
+					border: 1px solid #c7c8ca;
+					@include single-box-shadow(#dddddd, -2px, 2px, 4px, 0);
+					@include rem(margin-bottom, 14px);
+					background: #e3e4e5;
+					
+					.img {
+						@include rem(height, 58px);
+						background-repeat: no-repeat;
+						background-position: center;
+						border: 2px solid #fff;
+						opacity: 0.3;
+						transition: opacity 500ms;
+						-moz-transition: opacity 500ms; /* Firefox 4 */
+						-webkit-transition: opacity 500ms; /* Safari and Chrome */
+						-o-transition: opacity 500ms; /* Opera */
+					}
+				}
+				
+				p {
+					@include rem(font-size, 9px);
+					margin-bottom: 0;
+				}
+				
+				&:hover .img {
+					opacity: 1;
+				}
+				
+				&.active-feature-link .img {
+					opacity: 1;
+				}
+			}
+			
+		}
+		
+		.download {
+			@include rem(height, 108px);
+			@include rem(margin-bottom, 10px);
+			background: url(/images/download-bg.jpg) no-repeat left top;
+			background: url(/images/download-bg.jpg) no-repeat left top, url(/images/download-bg-repeater.jpg) repeat-x left top;
+			padding-left: 28%;
+			
+			h3 {
+				@include rem(padding-top, 40px);
+				@include rem(font-size, 25px);
+				text-transform: uppercase;
+				@include rem(margin-bottom, 7px);
+			}
+			
+			a {
+				display: block;
+				@include rem(height, 14px);
+				text-transform: uppercase;
+				@include rem(font-size, 12px);
+				@include rem(line-height, 14px);
+				padding-left: 18px;
+				background: url(/images/arrow.png) no-repeat left center;
+			}
+		}
+		
+		> p, > h4 {
+			margin-left: 1.39%;
+		}
+		
+	}
+	
+	.side {
+		float: right;
+		width: 33%;
+		
+		h2, h3, p {
+			margin-right: 24%;
+		}
+		
+		.contact {
+			clear: both;
+			@include rem(margin-top, 20px);
+			
+			h3 {
+				margin-right: 30%;
+			}
+			
+			.contact-heading {
+				/* IE10 Consumer Preview */ 
+				background-image: -ms-linear-gradient(left, #F0F0EF 20%, #FFFFFF 100%);
+
+				/* Mozilla Firefox */ 
+				background-image: -moz-linear-gradient(left, #F0F0EF 20%, #FFFFFF 100%);
+
+				/* Opera */ 
+				background-image: -o-linear-gradient(left, #F0F0EF 20%, #FFFFFF 100%);
+
+				/* Webkit (Safari/Chrome 10) */ 
+				background-image: -webkit-gradient(linear, left top, right top, color-stop(.2, #F0F0EF), color-stop(1, #FFFFFF));
+
+				/* Webkit (Chrome 11+) */ 
+				background-image: -webkit-linear-gradient(left, #F0F0EF 20%, #FFFFFF 100%);
+
+				/* W3C Markup, IE10 Release Preview */ 
+				background-image: linear-gradient(to right, #F0F0EF 20%, #FFFFFF 100%);
+				
+				padding-top: 1px;
+				@include rem(margin-bottom, 5px);
+				
+				
+			}
+			
+		}
+		
+	}
+	
+}
+
+.contact {
+	h5 {
+		background: #F9F7F6;
+		
+		/* IE10 Consumer Preview */ 
+		background-image: -ms-linear-gradient(left, #F9F7F6 20%, #FFFFFF 100%);
+
+		/* Mozilla Firefox */ 
+		background-image: -moz-linear-gradient(left, #F9F7F6 20%, #FFFFFF 100%);
+
+		/* Opera */ 
+		background-image: -o-linear-gradient(left, #F9F7F6 20%, #FFFFFF 100%);
+
+		/* Webkit (Safari/Chrome 10) */ 
+		background-image: -webkit-gradient(linear, left top, right top, color-stop(.2, #F9F7F6), color-stop(1, #FFFFFF));
+
+		/* Webkit (Chrome 11+) */ 
+		background-image: -webkit-linear-gradient(left, #F9F7F6 20%, #FFFFFF 100%);
+
+		/* W3C Markup, IE10 Release Preview */ 
+		background-image: linear-gradient(to right, #F9F7F6 20%, #FFFFFF 100%);
+
+		@include rem(line-height, 24px);
+		padding-left: 3%;
+	}
+
+	> span, > a {
+		display: block;
+		color: $links;
+		@include rem(font-size, 11px);
+		@include rem(line-height, 16px);
+		padding-left: 3%;
+		@include rem(margin-bottom, 14px);
+	}
+	
+	a {
+		text-decoration: none;
+		
+		&:hover {
+			color: $links_hov;
+			text-decoration: underline;
+		}
+		
+	}
+}

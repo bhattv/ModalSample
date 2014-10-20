@@ -1,0 +1,62 @@
+// Variables
+$default-font-size: 16px;
+$page_width: 1024px;
+$bg_color: #e6e7e2;
+$text_color: #A0A2A5;
+$red: #ac3638;
+$links: $red;
+$links_hov: #EB2622;
+$modal_bg: #dcddde;
+
+// Functions
+
+// calc-rem: calculate the rem value based on the desired pixel 
+// value versus a context value, usually the default font size
+@function calc-rem( $target, $context: $default-font-size ) {
+	@return $target / $context * 1rem;
+}
+
+// Shorthand redeclaration of the above
+@function cr( $target, $context: $default-font-size ) {
+	@return calc-rem( $target, $context );
+}
+
+
+// calc-percent: calculate the percent using the target ÷ context
+// formula, expressed as a percentage.  See Chapter 2 of "Responsive 
+// Web Design" (Marcotte, A Book Apart, 2011)
+@function calc-percent( $target, $context ) {
+	@return $target / $context * 100%;
+}
+
+// Shorthand redeclaration of the above
+@function cp( $target, $context ) {
+	@return calc-percent( $target, $context );
+}
+
+// Mixins
+
+@mixin retina($media: all) {
+	@media only #{$media} and (-webkit-min-device-pixel-ratio: 1.5) {
+		@content;
+	}
+}
+
+@mixin rem( $property, $value ) {
+	#{$property}: $value;
+	#{$property}: cr($value);
+}
+
+// Utility Classes
+
+.ir {
+	background-repeat: no-repeat;
+	display: block;
+	overflow: hidden;
+	text-indent: 101%;
+	white-space: nowrap;
+}
+
+.cf { *zoom: 1; }
+.cf:before, .cf:after { content: " "; display: table; }
+.cf:after { clear: both; }

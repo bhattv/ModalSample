@@ -1,0 +1,14 @@
+header {
+	@include rem(height, 174px);
+	background: url(/images/header-bg.jpg) no-repeat center top;
+	padding: 0 cp(50px, $page_width);
+	
+	a {
+		float: left;
+		@include rem(margin-top, 56px);
+		
+		&.ana-logo {
+			float: right;
+		}
+	}
+}

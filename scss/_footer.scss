@@ -1,0 +1,16 @@
+footer {
+	background: url(/images/footer-bg.jpg) no-repeat center bottom;
+	padding: 0 cp(22px, $page_width) 190px;
+	padding: 0 cp(22px, $page_width) cr(190px);
+	
+	a { float: left; }
+	
+	p { 
+		float: left;
+		margin-left: cp(12px, $page_width);
+		@include rem(margin-top, 16px);
+		@include rem(font-size, 10px);
+		color: #c8c8c1;
+		@include rem(line-height, 14px);
+	}
+}

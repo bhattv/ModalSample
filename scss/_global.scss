@@ -1,0 +1,134 @@
+html { 
+	font-size: cp($default-font-size, 16px); 
+	font-family: Helvetica, sans-serif;
+	color: $text_color;
+}
+
+body {
+	background: $bg_color;
+	position: relative;
+}
+
+i, em {
+	font-style: italic;
+}
+
+b, strong {
+	font-weight: bold;
+}
+
+h1 {
+	color: $red;
+	text-transform: uppercase;
+	@include rem(font-size, 24px);
+	font-weight: 100;
+	@include rem(margin-bottom, 6px);
+}
+
+h2 {
+	text-transform: uppercase;
+	@include rem(font-size, 24px);
+	font-weight: normal;
+	@include rem(margin-bottom, 16px);
+}
+
+h3 {
+	color: $red;
+	@include rem(font-size, 18px);
+	@include rem(line-height, 22px);
+	font-weight: 100;
+	@include rem(margin-bottom, 16px);
+}
+
+h4 {
+	@include rem(font-size, 14px);
+	font-weight: bold;
+	@include rem(margin-bottom, 10px);	
+}
+
+h5 {
+	text-transform: uppercase;
+	@include rem(font-size, 10px);
+	font-weight: bold;
+}
+
+p {
+	@include rem(font-size, 12px);
+	font-family: Verdana, sans-serif;
+	line-height: 1.6667;
+	@include rem(margin-bottom, 14px);
+}
+
+img.left {
+	float: left;
+	margin-right: 16px;
+	@include rem(margin-bottom, 8px);
+}
+
+a, a:link, a:active, a:focus, a:visited, a:hover {
+	color: $links;
+	text-decoration: underline;
+}
+
+a:hover {
+	color: $links_hov;
+}
+
+
+.button, .button:link, .button:active, .button:focus, .button:visited, .button:hover {
+	float: left;
+	clear: both;
+	padding: 15px 7.2%;
+	padding: cr(15px) 7.2%;
+	@include single-box-shadow(#bebebe, -1px, 1px, 1px, 0);
+	color: #e4e4e4;
+	@include rem(font-size, 10px);
+	@include rem(line-height, 10px);
+	@include rem(margin-bottom, 16px);
+	text-decoration: none;
+	text-align: center;
+	font-weight: bold;
+	font-family: Verdana, sans-serif;
+	
+	background: #B65D60;
+	
+	/* IE10 Consumer Preview */ 
+	background-image: -ms-linear-gradient(top left, #B75F62 50%, #9C2A2F 100%);
+
+	/* Mozilla Firefox */ 
+	background-image: -moz-linear-gradient(top left, #B75F62 50%, #9C2A2F 100%);
+
+	/* Opera */ 
+	background-image: -o-linear-gradient(top left, #B75F62 50%, #9C2A2F 100%);
+
+	/* Webkit (Safari/Chrome 10) */ 
+	background-image: -webkit-gradient(linear, left top, right bottom, color-stop(.5, #B75F62), color-stop(1, #9C2A2F));
+
+	/* Webkit (Chrome 11+) */ 
+	background-image: -webkit-linear-gradient(top left, #B75F62 50%, #9C2A2F 100%);
+
+	/* W3C Markup, IE10 Release Preview */ 
+	background-image: linear-gradient(to bottom right, #B75F62 50%, #9C2A2F 100%);
+	
+}
+
+.button:hover {
+	color: #fff;
+}
+
+.legal {
+	@include rem(font-size, 9px);
+}
+
+#page {
+	border-left: 3px solid #fff;
+	border-right: 3px solid #fff;
+	margin: 0 auto;
+	width: $page_width;
+}
+
+#container {
+	background: #ffffff;
+	border-left: 1px solid $bg_color;
+	border-right: 1px solid $bg_color;
+}

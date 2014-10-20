@@ -1,0 +1,215 @@
+.modal {
+	
+	display: none;
+	position: absolute;
+	z-index: 999999;
+	background: $modal_bg;
+	border: 2px solid $modal_bg;
+	@include single-box-shadow(#999, 0px, 1px, 1px, 0, true);
+	padding: 50px;
+	width: 262px;
+	
+	.close {
+		width: 13px;
+		height: 14px;
+		background: url(/images/close.png) no-repeat center;
+		position: absolute;
+		top: 7px;
+		right: 6px;
+	}
+	
+	h3 {
+		@include rem(font-size, 26px);
+		@include rem(line-height, 28px);
+		text-transform: uppercase;
+	}
+	
+	form {
+		margin-left: 20%;
+		font-family: Verdana, sans-serif;
+		
+		h4 {
+			font-family: Helvetica, sans-serif;
+		}
+		
+		legend {
+			display: block;
+			@include rem(font-size, 10px);
+			@include rem(padding-bottom, 8px);
+			
+			&.error {
+				color: $red;
+			}
+			
+		}
+		
+		label {
+			display: block;
+			color: #737476;
+			@include rem(font-size, 12px);
+			@include rem(margin-top, 10px);
+			@include rem(margin-bottom, 8px);
+			
+			&.ir {
+				height: 0;
+				margin: 0;
+			}
+		}
+		
+		input {
+			display: block;
+			width: 245px;
+			border: 1px solid #c0c2c3;
+			padding: 4px;
+			
+			background: #e5e6e5;
+			/* IE10 Consumer Preview */ 
+			background-image: -ms-linear-gradient(left, #e7e7e5 0%, #e1e2e2 100%);
+
+			/* Mozilla Firefox */ 
+			background-image: -moz-linear-gradient(left, #e7e7e5 0%, #e1e2e2 100%);
+
+			/* Opera */ 
+			background-image: -o-linear-gradient(left, #e7e7e5 0%, #e1e2e2 100%);
+
+			/* Webkit (Safari/Chrome 10) */ 
+			background-image: -webkit-gradient(linear, left top, right top, color-stop(0, #e7e7e5), color-stop(1, #e1e2e2));
+
+			/* Webkit (Chrome 11+) */ 
+			background-image: -webkit-linear-gradient(left, #e7e7e5 0%, #e1e2e2 100%);
+
+			/* W3C Markup, IE10 Release Preview */ 
+			background-image: linear-gradient(to right, #e7e7e5 0%, #e1e2e2 100%);
+			
+			@include rem(margin-bottom, 8px);
+			@include rem(font-size, 12px);
+			-webkit-appearance: none;
+			-webkit-border-radius: 0;
+			-moz-border-radius: 0;
+			border-radius: 0;
+			
+			&[type="submit"] {
+				float: left;
+				width: auto;
+				padding: 4px 4%;
+				@include rem(margin-top, 20px);
+				@include rem(margin-bottom, 20px);
+				background: $red;
+				color: #fff;
+				border: none;
+				@include single-box-shadow(#999, 0px, 0px, 1px, 0);
+				
+				&:hover {
+					cursor: pointer;
+				}
+			}
+		}
+		
+		.error {
+			input {
+				&::-webkit-input-placeholder {
+				    color: $red;
+				}
+				&:-moz-placeholder {
+				    color: $red;
+				}
+				&:-ms-placeholder {
+				    color: $red;
+				}
+				
+				border: 1px solid #b65f60;
+				background: #d5bbbc;
+				/* IE10 Consumer Preview */ 
+				background-image: -ms-linear-gradient(left, #d5bbbc 0%, #cda2a3 100%);
+
+				/* Mozilla Firefox */ 
+				background-image: -moz-linear-gradient(left, #d5bbbc 0%, #cda2a3 100%);
+
+				/* Opera */ 
+				background-image: -o-linear-gradient(left, #d5bbbc 0%, #cda2a3 100%);
+
+				/* Webkit (Safari/Chrome 10) */ 
+				background-image: -webkit-gradient(linear, left top, right top, color-stop(0, #d5bbbc), color-stop(1, #cda2a3));
+
+				/* Webkit (Chrome 11+) */ 
+				background-image: -webkit-linear-gradient(left, #d5bbbc 0%, #cda2a3 100%);
+
+				/* W3C Markup, IE10 Release Preview */ 
+				background-image: linear-gradient(to right, #d5bbbc 0%, #cda2a3 100%);
+			}
+			label {
+				color: $red;
+			}
+		}
+	}
+	
+	&#form-modal {
+		
+		padding: 50px 22px;
+		width: 318px;
+		
+		h3 {
+			@include rem(height, 84px);
+			@include rem(padding-top, 26px);
+			padding-left: 46.5%;
+			background: url(/images/download-bg-modal.png) no-repeat left center;
+			@include rem(margin-bottom, 5px);
+		}
+		
+		.legal {
+			clear: both;
+		}
+	}
+	
+	&#thanks-modal {
+		
+		h4 {
+			@include rem(line-height, 20px);
+		}
+		
+		.contact {
+			h5 {
+				/* IE10 Consumer Preview */ 
+				background-image: -ms-linear-gradient(left, #e4e4e3 20%, #dfdfe0 100%);
+
+				/* Mozilla Firefox */ 
+				background-image: -moz-linear-gradient(left, #e4e4e3 20%, #dfdfe0 100%);
+
+				/* Opera */ 
+				background-image: -o-linear-gradient(left, #e4e4e3 20%, #dfdfe0 100%);
+
+				/* Webkit (Safari/Chrome 10) */ 
+				background-image: -webkit-gradient(linear, left top, right top, color-stop(.2, #e4e4e3), color-stop(1, #dfdfe0));
+
+				/* Webkit (Chrome 11+) */ 
+				background-image: -webkit-linear-gradient(left, #e4e4e3 20%, #dfdfe0 100%);
+
+				/* W3C Markup, IE10 Release Preview */ 
+				background-image: linear-gradient(to right, #e4e4e3 20%, #dfdfe0 100%);
+
+				@include rem(margin-bottom, 5px);
+			}
+			> span, > a {
+				font-family: Verdana, sans-serif;
+			}
+		}
+		
+	}
+}
+
+.ie .error input {
+	color: $red;
+}
+
+#mask {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 900000;
+	background: #000;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+    filter: alpha(opacity=60);
+    opacity: 0.6;
+}
